@@ -1,0 +1,53 @@
+version: 2
+
+jobs:
+  test-jvm:
+    docker:
+      - image: theasp/clojurescript-nodejs:latest
+    working_directory: /root/macchiato
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "project.clj" }}
+            - v1-dependencies
+      - run:
+          command: lein deps
+      - save_cache:
+          key: v1-dependencies-{{ checksum "project.clj" }}
+          paths:
+            - /root/.m2
+      - run:
+          command: lein test
+
+  test-lumo:
+    docker:
+      - image: theasp/clojurescript-nodejs:latest
+    working_directory: /root/macchiato
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "project.clj" }}
+            - v1-dependencies
+      - run:
+          name: Install Lumo
+          command: |
+            if [[ ! $(which lumo) ]]; then
+              npm --global install lumo-cljs@1.8.0 --unsafe-perm
+            fi
+      - run:
+          command: lein deps
+      - save_cache:
+          key: v1-dependencies-{{ checksum "project.clj" }}
+          paths:
+            - /root/.m2
+      - run:
+          command: lein test-lumo
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test-jvm
+      - test-lumo
