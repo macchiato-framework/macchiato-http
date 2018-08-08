@@ -1,0 +1,31 @@
+{
+  "name": "@macchiato/http",
+  "version": "0.0.1",
+  "description": "Http request/response helpers for Macchiato.",
+  "author": {
+    "name" : "Dmitri Sotnikov",
+    "email" : "dmitri.sotnikov@gmail.com",
+    "url" : "http://yogthos.net/"
+  },
+  "contributors": [
+    {
+      "name" : "Andrea Richiardi",
+      "email": "a.richiardi.work@gmail.com",
+      "url" : "https://andrearichiardi.com/"
+    }
+  ],
+  "homepage": "https://github.com/macchiato-framework/macchiato-http",
+  "license": "MIT",
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src/*"
+  ],
+  "keywords": [
+    "clojure",
+    "clojurescript",
+    "cljs",
+    "self-host"
+  ]
+}
