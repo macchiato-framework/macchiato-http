@@ -5,7 +5,8 @@ See the [macchiato framework](https://github.com/macchiato-framework) for more d
 [![Clojars Project](https://img.shields.io/clojars/v/macchiato/http.svg)](https://clojars.org/macchiato/http)
 
 This project's goal is to provide the request/response constructors in a standalone library. No middleware is included here, only pure functions.
-It is what in its very first iteration what `macchiato.util` in Macchiato Core is.
+
+In its very first iteration this code is just what `macchiato.util` in Macchiato Core is/used to be.
 
 ### Examples
 
