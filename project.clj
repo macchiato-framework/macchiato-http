@@ -36,9 +36,9 @@
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" "release"]
                   ["vcs" "commit" "Release %s"]
-                  ["vcs" "tag" ""]
+                  ["vcs" "tag"]
                   ["change" "version" "leiningen.release/bump-version"]
-                  ["vcs" "commit" "Version %s"]]
+                  ["vcs" "commit"]]
 
   :aliases
   {"test"
