@@ -52,4 +52,6 @@
    "test-lumo"
    ["do"
     ["clean"]
-    ["with-profile" "self-host" "tach" "lumo" "test"]]})
+    ["with-profile" "self-host" "tach" "lumo" "test"]]
+   "bump-version"
+   ["change" "version" "leiningen.release/bump-version"]})
