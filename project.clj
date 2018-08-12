@@ -6,12 +6,11 @@
   :license {:name "MIT License"
             :url  "http://opensource.org/licenses/MIT"}
   :clojurescript? true
-  :dependencies []
+  :dependencies [[com.cognitect/transit-cljs "0.8.256"]]
   :npm {:dependencies []}
   :plugins [[codox "0.6.4"]]
   :profiles {:test {:dependencies [[org.clojure/clojure "1.9.0" :scope "test"]
-                                   [org.clojure/clojurescript "1.10.339" :scope "test"]
-                                   [com.cognitect/transit-cljs "0.8.256" :scope "test"]]
+                                   [org.clojure/clojurescript "1.10.339" :scope "test"]]
                     :plugins [[lein-doo "0.1.10"]
                               [lein-cljsbuild "1.1.7"]]
                     :cljsbuild
