@@ -34,10 +34,10 @@
                          :plugins [[lein-tach "1.0.0"]]}}
 
   :release-tasks [["vcs" "assert-committed"]
-                  ["bump-version" "release"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
                   ["vcs" "commit" "Release %s"]
-                  ["vcs" "tag" "" "--no-sign"]
-                  ["bump-version"]
+                  ["vcs" "tag" ""]
+                  ["change" "version" "leiningen.release/bump-version"]
                   ["vcs" "commit" "Version %s"]]
 
   :aliases
