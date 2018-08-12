@@ -1,4 +1,4 @@
-(defproject macchiato/http "0.1.1"
+(defproject macchiato/http "0.1.2-SNAPSHOT"
   :description "Http request/response helpers for Macchiato."
   :url "https://github.com/macchiato-framework/macchiato-http"
   :scm {:name "git"
