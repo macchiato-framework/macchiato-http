@@ -32,6 +32,14 @@
                                 :cache? false
                                 :debug? true}
                          :plugins [[lein-tach "1.0.0"]]}}
+
+  :release-tasks [["vcs" "assert-committed"]
+                  ["bump-version" "release"]
+                  ["vcs" "commit" "Release %s"]
+                  ["vcs" "tag" "" "--no-sign"]
+                  ["bump-version"]
+                  ["vcs" "commit" "Version %s"]]
+
   :aliases
   {"test"
    ["do"
