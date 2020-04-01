@@ -113,7 +113,7 @@ re-value (str re-token "|" re-quoted))
 (defmethod body-string :string [request]
   (:body request))
 
-(defmethod body-string :string [request]
+(defmethod body-string :coll [request]
   (apply str (:body request)))
 
 (defn path-info

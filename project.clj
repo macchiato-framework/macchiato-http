@@ -1,4 +1,4 @@
-(defproject macchiato/http "0.1.2-SNAPSHOT"
+(defproject macchiato/http "0.1.2"
   :description "Http request/response helpers for Macchiato."
   :url "https://github.com/macchiato-framework/macchiato-http"
   :scm {:name "git"
@@ -9,8 +9,8 @@
   :dependencies [[com.cognitect/transit-cljs "0.8.256"]]
   :npm {:dependencies []}
   :plugins [[codox "0.6.4"]]
-  :profiles {:test {:dependencies [[org.clojure/clojure "1.9.0" :scope "test"]
-                                   [org.clojure/clojurescript "1.10.339" :scope "test"]]
+  :profiles {:test {:dependencies [[org.clojure/clojure "1.10.1" :scope "test"]
+                                   [org.clojure/clojurescript "1.10.597" :scope "test"]]
                     :plugins [[lein-doo "0.1.10"]
                               [lein-cljsbuild "1.1.7"]]
                     :cljsbuild
